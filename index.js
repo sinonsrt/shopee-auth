@@ -19,6 +19,7 @@ const getUrl = ({ url, path, redirect, sign }) =>
   `${url}${path}?partner_id=${partner_id}&timestamp=${timestamp}${
     redirect ? `&redirect=${redirect}` : ''
   }&sign=${sign}`;
+
 const getSignature = (...params) => {
   const baseString = params.reduce(
     (prev, current) => `${prev}${current}`,
@@ -61,21 +62,5 @@ const getSignature = (...params) => {
   console.log({ authUrl, accessTokenURL, refreshTokenURL });
 })();
 
-// axios
-//   .get(getOrderList_url, {
-//     params: {
-//       time_range_field: 'create_time',
-//       time_from: '1643028232',
-//       time_to: '1643201040',
-//       page_size: 20,
-//       response_optional_fields: 'order_status',
-//     },
-//   })
-//   .then((data) => {
-//     console.log('RESPOSTA ---> ', JSON.stringify(data.data, null, 2));
-//   })
-//   .catch((error) => {
-//     console.log('ERRO ---> ', error.response.data);
-//   });
 
 //https://seller.shopee.com.br/edu/article/6516
