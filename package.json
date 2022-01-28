@@ -1,0 +1,14 @@
+{
+  "name": "shopee",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dotenv": "^14.3.2",
+    "nodemon": "^2.0.15"
+  }
+}
