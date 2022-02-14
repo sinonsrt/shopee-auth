@@ -43,6 +43,7 @@ const getSignature = (...params) => {
   const authUrl = getUrl({
     url: test_base_url,
     path: PATH.auth,
+    redirect: test_base_url,
     sign: authSign,
   });
 
